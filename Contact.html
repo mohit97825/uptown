@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contact</title>
+</head>
+<style>
+* {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    nav {
+        width: 100%;
+        height: 600px;
+        background: url(image/flat\ 1.jpg), gray;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+
+    .logo-nav {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    .logo img {
+        width: 55%;
+        height: auto;
+    }
+
+    .nav ol {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav ol li {
+        list-style-type: none;
+        padding: 39px 18px;
+    }
+
+    .nav ol li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    .nav ol li a:hover {
+        padding: 30% 0%;
+        border-top: 5px solid #bda588;
+        color: #bda588;
+    }
+
+    .location-logo h1 {
+        text-align: center;
+        padding-top: 20%;
+        font-size: 70px;
+        font-weight: 400;
+        color: white;
+    }
+
+    .homepage {
+        padding-left: 40%;
+    }
+
+    .homepage ol {
+        display: flex;
+    }
+
+    .homepage ol li {
+        list-style: none;
+        padding: 20px 20px;
+    }
+
+    .homepage ol li a {
+        color: white;
+        text-align: center;
+    }
+
+    .homepage ol li a:hover {
+        color: #bda588;
+    }
+    
+    main{
+        margin-bottom: 5%;
+    }
+
+    .map {
+        display: flex;
+        /* Use flexbox for layout */
+        justify-content: space-between;
+        /* Space between write and maping */
+        align-items: flex-start;
+        /* Align items at the top */
+        flex-wrap: wrap;
+        /* Allow wrapping for smaller screens */
+        margin-bottom: 5%;
+    }
+
+    .write {
+        flex: 1;
+        /* Allow write section to take available space */
+        max-width: 40%;
+        /* Limit maximum width */
+        padding: 20px;
+        /* Add padding */
+    }
+
+    .write1 {
+        width: 100%;
+        /* Full width for responsiveness */
+    }
+
+    .class-p1 {
+        color: #bda588;
+        font-weight: bold;
+        font-size: 0.8rem;
+        /* Adjusted for smaller screens */
+    }
+
+    .write1 h1 {
+        font-size: 2.5rem;
+        /* Reduced for responsiveness */
+        color: #173e62;
+    }
+
+    .class-p2 {
+        font-size: 1.2rem;
+        /* Adjusted for smaller screens */
+        color: #173e62;
+    }
+
+    .office1 ol li {
+        list-style: none;
+        margin: 10px 0;
+        /* Reduced margin for smaller screens */
+    }
+
+    .icon {
+        padding: 10px;
+    }
+
+    .maping {
+        flex: 1;
+        /* Allow maping section to take available space */
+        max-width: 50%;
+        /* Limit maximum width */
+    }
+
+    @media (max-width: 768px) {
+        .map {
+            flex-direction: column;
+            /* Stack on smaller screens */
+            align-items: center;
+            /* Center items */
+        }
+
+        .write,
+        .maping {
+            max-width: 100%;
+            /* Full width when stacked */
+            margin: 10px 0;
+            /* Space between stacked elements */
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-wrap: wrap;
+        /* Allow wrapping for smaller screens */
+        box-shadow: 0px 0px 10px gray;
+        justify-content: space-between;
+        /* Distribute space between items */
+        align-items: center;
+        /* Center items vertically */
+    }
+
+    .img {
+        flex: 1;
+        /* Allow image to take available space */
+        max-width: 40%;
+        /* Limit maximum width */
+        margin: 0;
+        /* Remove margin */
+    }
+
+    .img img {
+        width: 100%;
+        /* Full width for responsiveness */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .form {
+        flex: 1;
+        /* Allow form to take available space */
+        max-width: 50%;
+        /* Limit maximum width */
+        margin-left: 20px;
+        /* Space between image and form */
+    }
+
+    .form-div1 {
+        width: 100%;
+        /* Full width for responsiveness */
+        margin: 0;
+        /* Center the form */
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .contact {
+            flex-direction: column;
+            /* Stack contact section on smaller screens */
+            align-items: center;
+            /* Center items */
+        }
+
+        .img,
+        .form {
+            max-width: 100%;
+            /* Full width for stacking */
+            margin-left: 0;
+            /* Remove left margin */
+        }
+    }
+
+    .form-div1 p {
+        color: #bda588;
+    }
+
+    .form-div1 h1 {
+        font-size: 2rem;
+        color: #173e62;
+    }
+
+    .form-div1 input,
+    .form-div1 textarea,
+    button {
+        width: 100%;
+        /* Full width for responsiveness */
+        margin: 10px 0;
+        /* Spacing for inputs */
+        padding: 10px;
+    }
+
+    button {
+        background-color: #bda588;
+        color: white;
+        font-weight: bold;
+        border: none;
+    }
+
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        /* Allow wrapping on smaller screens */
+        justify-content: space-around;
+        background-color: #262f39;
+        padding: 30px;
+        line-height: 2;
+        color: rgb(194 160 119);
+    }
+
+    .footer p {
+        font-size: 1.2rem;
+        /* Adjusted for smaller screens */
+        font-weight: bold;
+    }
+
+    .footer ol {
+        list-style: none;
+    }
+
+    .footer ol li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer ol li a:hover {
+        color: rgb(194 160 119);
+    }
+
+    .footer1,
+    .footer2,
+    .footer3,
+    .footer4 {
+        width: 22%;
+        min-width: 150px;
+        /* Minimum width for smaller screens */
+    }
+
+    /* Media Queries for responsiveness */
+    @media (max-width: 768px) {
+        .nav ol {
+            flex-direction: column;
+            /* Stack navigation on smaller screens */
+            align-items: center;
+        }
+
+        .map {
+            flex-direction: column;
+            /* Stack map section */
+        }
+
+        .contact {
+            flex-direction: column;
+            /* Stack contact section */
+        }
+
+        .footer {
+            flex-direction: column;
+            /* Stack footer */
+            align-items: center;
+            /* Center footer content */
+        }
+
+        .footer1,
+        .footer2,
+        .footer3,
+        .footer4 {
+            width: 100%;
+            /* Full width for footer items */
+            margin-bottom: 20px;
+            /* Space between footer items */
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-nav">
+                <div class="logo">
+                    <img src="image/logo.png" alt="logo">
+                </div>
+                <div class="nav">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="sitePlan.html">Site plan</a></li>
+                        <li><a href="floor.html">Flour Plan</a></li>
+                        <li><a href="club.html">Club skylla</a></li>
+                        <li><a href="price-list.html">Price List</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="compliances.html">Compliances</a></li>
+                        <li><a href="Contact.html">Contact us</a></li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="location-logo">
+                <h1>Contact</h1>
+                <div class="homepage">
+                    <ol>
+                        <li><a href="index.html">HomePage</a></li>
+                        <li><a href="location.html">Location</a></li>
+                    </ol>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="map">
+            <div class="write">
+                <div class="write1">
+                    <p class="class-p1">GET IN TOUCH</p>
+                    <br>
+                    <h1>Visit Our Project Site or Contact us today</h1>
+                    <br>
+                    <p class="class-p2">head Office:</p>
+                    <div class="office1">
+                        <ol>
+                            <li><i class="icon fa-regular fa-address-book"></i>PR7, 200 ft International Airport Road,
+                                Zirakpur, Punjab 140603</li>
+                            <li><i class="icon fa-solid fa-envelope"></i>info@uptownskylla.in</li>
+                            <li><i class="icon fa-solid fa-phone"></i>+91 7009247378</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="maping">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28455.804924995213!2d75.71368551083985!3d26.935987500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3729dfb8569%3A0xdff44ac1ebfe1264!2sShree%20Khatu%20Shyam%20Mandir!5e0!3m2!1sen!2sin!4v1727424934083!5m2!1sen!2sin"
+                    width="100%" height="600px" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section class="contact">
+            <br>
+            <div class="img">
+                <img src="image/Contact-image.jpg" alt="">
+            </div>
+            <div class="form">
+                <div class="form-div1">
+                    <br>
+                    <p>LEAVE A MESSAGE</p><br>
+                    <h1>We love to hear from to you</h1>
+                    <br>
+                    <form action="">
+                        <div>
+                            <label for="name">Name:
+                                <input type="text" name="name" placeholder="Name">
+                            </label><br><br>
+                        </div>
+
+                        <div>
+                            <label for="email">Email:
+                                <input type="email" name="email" placeholder="email">
+                            </label><br><br>
+                        </div>
+
+                        <div>
+                            <label for="Phone number">Phone number:
+                                <input type="number" name="Phone number" placeholder="Phone number">
+                            </label><br><br>
+                        </div>
+
+                        <div>
+                            <label for="text">Messages:
+                                <textarea name="text" id=""></textarea>
+                            </label><br>
+                            <button>Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer1">
+            <p>ABOUT US</p>
+            <ol>
+                <li><a href="">Uptown Skylla offering</a></li>
+                <li><a href="">Luxery 2/3/4 BHK Possession</a></li>
+                <li><a href="">Ready Fats In IRAKPUR WITH</a></li>
+                <li><a href="">an Ultra Luxaury Amenities & 5</a></li>
+                <li><a href="">Star Rated Club House.#1</a></li>
+                <li><a href="">Contruction Quality.IGBC</a></li>
+                <li><a href="">Gold Pre Certified</a></li>
+                <li><a href="">Project.Possession Aug-23</a></li>
+            </ol>
+        </div>
+        <div class="footer2">
+            <p>USEFULL LINKS</p>
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="club.html">Club Skylla</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="">Why Choose us</a></li>
+                <li><a href="sitePlan.html">Site Plan</a></li>
+                <li><a href="price-list.html">Price List</a></li>
+            </ol>
+        </div>
+        <div class="footer3">
+            <p>Floor Plan</p>
+            <ol>
+                <li><a href="">2 BHK Flats</a></li>
+                <li><a href="">3 BHK Executive</a></li>
+                <li><a href="">3 BHK Premium</a></li>
+                <li><a href="">3 BHK Grande</a></li>
+                <li><a href="">3BHK + SERVANT ROOM</a></li>
+                <li><a href="">4 BHK + SERVANT ROOM</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ol>
+        </div>
+        <div class="footer4">
+            <p>Contact Us</p>
+            <ol>
+                <li><i class="fa-solid fa-location-dot"></i><a href="">PR-7,Chandigarh International <br> Airport Road,
+                        Zirakpur, Punjab <br> 140603</a></li>
+                <li><i class="fa-solid fa-phone"></i><a href="">+91 7009247378</a></li>
+                <li><i class="fa-solid fa-message"></i><a href="">info@uptownskylla.in</a></li>
+            </ol>
+        </div>
+    </footer>
+</body>
+
+</html>

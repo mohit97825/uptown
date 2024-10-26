@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floor</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    nav {
+        width: 100%;
+        height: 600px;
+        background: url(image/flat\ 1.jpg), gray;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+
+    .logo-nav {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    .logo img {
+        width: 55%;
+        height: auto;
+    }
+
+    .nav ol {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav ol li {
+        list-style-type: none;
+        padding: 39px 18px;
+    }
+
+    .nav ol li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    .nav ol li a:hover {
+        padding: 30% 0%;
+        border-top: 5px solid #bda588;
+        color: #bda588;
+    }
+
+    .location-logo h1 {
+        text-align: center;
+        padding-top: 20%;
+        font-size: 70px;
+        font-weight: 400;
+        color: white;
+    }
+
+    .homepage {
+        padding-left: 40%;
+    }
+
+    .homepage ol {
+        display: flex;
+    }
+
+    .homepage ol li {
+        list-style: none;
+        padding: 20px 20px;
+    }
+
+    .homepage ol li a {
+        color: white;
+        text-align: center;
+    }
+
+    .homepage ol li a:hover {
+        color: #bda588;
+    }
+
+    .offer {
+        padding: 20px;
+    }
+
+    .offer center {
+        font-size: 2em;
+        color: #173e62;
+        font-weight: bold;
+    }
+
+    .offer-div1,
+    .offer-div2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .offer-div1-div1,
+    .offer-div1-div2,
+    .offer-div1-div3 {
+        flex: 1 1 30%;
+        /* Flexbox for responsiveness */
+        max-width: 30%;
+        padding: 10px;
+        box-shadow: 0px 0px 5px gray;
+    }
+
+    .offer-div1-div-img img {
+        width: 100%;
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .offer-div1-div-desc {
+        padding: 10px;
+    }
+
+    .project,
+    .footer {
+        padding: 20px;
+    }
+
+    .footer {
+        line-height: 2;
+        background-color: #173e62;
+    }
+
+    .project1,
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .footer div {
+        flex: 1 1 22%;
+        /* Flexbox for responsiveness */
+        margin: 10px;
+    }
+
+    .footer p {
+        font-weight: bold;
+        font-size: 1.5em;
+        color: rgb(194, 160, 119);
+    }
+
+    .footer ol li {
+        list-style: none;
+    }
+
+    .footer ol li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer ol li a:hover {
+        color: rgb(194, 160, 119);
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .nav ol {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .offer-div1-div1,
+        .offer-div1-div2,
+        .offer-div1-div3 {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+
+        .project1,
+        .footer {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer div {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-nav">
+                <div class="logo">
+                    <img src="image/logo.png" alt="logo">
+                </div>
+                <div class="nav">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="sitePlan.html">Site plan</a></li>
+                        <li><a href="floor.html">Flour Plan</a></li>
+                        <li><a href="club.html">Club skylla</a></li>
+                        <li><a href="price-list.html">Price List</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="compliances.html">Compliances</a></li>
+                        <li><a href="Contact.html">Contact us</a></li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="location-logo">
+                <h1>Flour Plan</h1>
+                <div class="homepage">
+                    <ol>
+                        <li><a href="index.html">HomePage</a></li>
+                        <li><a href="location.html">Location</a></li>
+                    </ol>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="offer">
+            <center>Our Offering</center>
+            <div class="offer-div1">
+                <div class="offer-div1-div1">
+                    <div class="offer-div1-div-img">
+                        <img src="image/room.jpg" width="100%" height="100%">
+                    </div>
+                    <div class="offer-div1-div-desc">
+                        <h2>2 BHK Flats</h2>
+                        <p>Airport Road Zirakpur</p><br>
+                        <pre><strong>Status</strong>                       Ready to Move</pre><br>
+                        <pre><strong>Area</strong>                          1220 Sq ft</pre><br>
+                        <pre><strong>Type</strong>                       2 BHK Luxury Apartment</pre>
+                    </div>
+                </div>
+
+                <div class="offer-div1-div2">
+                    <div class="offer-div1-div-img">
+                        <img src="image/room2.jpg" width="100%" height="100%">
+                    </div>
+                    <div class="offer-div1-div-desc">
+                        <h2>3 BHK Executive</h2>
+                        <p>Airport Road Zirakpur</p><br>
+                        <pre><strong>Status</strong>         Ready to Move - Few units left !!</pre><br>
+                        <pre><strong>Area</strong>              1420 Sq ft</pre><br>
+                        <pre><strong>Type</strong>              3 BHK Luxury Apartment</pre>
+                    </div>
+                </div>
+
+                <div class="offer-div1-div3">
+                    <div class="offer-div1-div-img">
+                        <img src="image/room3.jpg" width="100%" height="100%">
+                    </div>
+                    <div class="offer-div1-div-desc">
+                        <h2>3 BHK premium</h2>
+                        <p>Airport Road Zirakpur</p><br>
+                        <pre><strong>Status</strong>                       Ready to Move - SOLD</pre><br>
+                        <pre><strong>Area</strong>                            1505 Sq ft</pre><br>
+                        <pre><strong>Type</strong>                            3 BHK Premium</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offer-div2">
+                <div class="offer-div1-div1">
+                    <div class="offer-div1-div-img">
+                        <img src="image/room4.jpg" width="100%" height="100%">
+                    </div>
+                    <div class="offer-div1-div-desc">
+                        <h2>3 bHK GRANDE</h2>
+                        <p>Airport Road Zirakpur</p><br>
+                        <pre><strong>Status</strong>                       Ready to Move - SOLD</pre><br>
+                        <pre><strong>Area</strong>                              1665 Sq ft 
+                        <pre><strong>Type</strong>                                     3 BHK Grande</pre>
+                    </div>
+                </div>
+
+                <div class="offer-div1-div1">
+                    <div class="offer-div1-div-img">
+                        <img src="image/room5.jpg" width="100%" height="100%">
+                    </div>
+                    <div class="offer-div1-div-desc">
+                        <h2>3BHK + SERVENT ROOM</h2>
+                        <p>Airport Road Zirakpur</p><br>
+                        <pre><strong>Status</strong>         Ready to Move - Few units left !!</pre><br>
+                        <pre><strong>Area</strong>              2020 Sq ft</pre><br>
+                        <pre><strong>Type</strong>              Luxury 3+S Apartments</pre>
+                    </div>
+                </div>
+
+                <div class="offer-div1-div1">
+                    <div class="offer-div1-div-img">
+                        <img src="image/room6.jpg" width="100%" height="100%">
+                    </div>
+                    <div class="offer-div1-div-desc">
+                        <h2>4BHK + SERVENT ROOM</h2>
+                        <p>Airport Road Zirakpur</p><br>
+                        <pre><strong>Status</strong>  Possession Ready - Limited </BR> Inventory</pre><br>
+                        <pre><strong>Area</strong>     2505 Sq ft</pre><br>
+                        <pre><strong>Type</strong>     Luxury 4BHK+Servant Apartments</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer1">
+            <p>ABOUT US</p>
+            <ol>
+                <li><a href="">Uptown Skylla offering</a></li>
+                <li><a href="">Luxery 2/3/4 BHK Possession</a></li>
+                <li><a href="">Ready Fats In IRAKPUR WITH</a></li>
+                <li><a href="">an Ultra Luxaury Amenities & 5</a></li>
+                <li><a href="">Star Rated Club House.#1</a></li>
+                <li><a href="">Contruction Quality.IGBC</a></li>
+                <li><a href="">Gold Pre Certified</a></li>
+                <li><a href="">Project.Possession Aug-23</a></li>
+            </ol>
+        </div>
+        <div class="footer2">
+            <p>USEFULL LINKS</p>
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="club.html">Club Skylla</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="">Why Choose us</a></li>
+                <li><a href="sitePlan.html">Site Plan</a></li>
+                <li><a href="price-list.html">Price List</a></li>
+            </ol>
+        </div>
+        <div class="footer3">
+            <p>Floor Plan</p>
+            <ol>
+                <li><a href="">2 BHK Flats</a></li>
+                <li><a href="">3 BHK Executive</a></li>
+                <li><a href="">3 BHK Premium</a></li>
+                <li><a href="">3 BHK Grande</a></li>
+                <li><a href="">3BHK + SERVANT ROOM</a></li>
+                <li><a href="">4 BHK + SERVANT ROOM</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ol>
+        </div>
+        <div class="footer4">
+            <p>Contact Us</p>
+            <ol>
+                <li><i class="fa-solid fa-location-dot"></i><a href="">PR-7,Chandigarh International <br> Airport Road,
+                        Zirakpur, Punjab <br> 140603</a></li>
+                <li><i class="fa-solid fa-phone"></i><a href="">+91 7009247378</a></li>
+                <li><i class="fa-solid fa-message"></i><a href="">info@uptownskylla.in</a></li>
+            </ol>
+        </div>
+    </footer>
+</body>
+
+</html>

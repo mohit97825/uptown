@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Gallery</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        background: url(image/flat\ 1.jpg), gray;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+
+    .logo-nav {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        /* Align items vertically */
+    }
+
+    .logo {
+        width: 20%;
+        /* Keep this for smaller logo size */
+    }
+
+    .logo img {
+        width: 100%;
+        /* Make the logo responsive */
+        max-width: 100px;
+        /* Set a smaller maximum width for the logo */
+        height: auto;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .nav ol {
+        display: flex;
+        flex-wrap: wrap;
+        /* Allow wrapping for smaller screens */
+        justify-content: flex-start;
+        /* Align items to the left */
+    }
+
+    .nav ol li {
+        list-style-type: none;
+        padding: 15px;
+        /* Adjusted padding */
+    }
+
+    .nav ol li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    .nav ol li a:hover {
+        padding-top: 30%;
+        border-top: 5px solid #bda588;
+        color: #bda588;
+    }
+
+    .mains {
+        padding: 5% 5%;
+        /* Adjusted padding */
+        text-align: left;
+        /* Align text to the left */
+        color: white;
+    }
+
+    .mains h1 {
+        color: white;
+        font-size: 2.5rem;
+        /* Adjusted for responsiveness */
+    }
+
+    /* The rest of your existing styles remain unchanged */
+
+    .mains button {
+        padding: 10px 20px;
+        /* Adjusted padding */
+        border: 0.3px solid white;
+        background-color: rgb(189 165 136);
+    }
+
+    .mains button a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .phone {
+        margin: 10px 0;
+        /* Add some spacing */
+        color: white;
+    }
+
+    .gallery {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        /* Center the gallery title */
+    }
+
+    .gallery-logo {
+        font-size: 2.5rem;
+        /* Increased font size */
+        color: #173e62;
+    }
+
+    .gallery-per {
+        display: flex;
+        justify-content: center;
+        /* Center the gallery section */
+        flex-wrap: wrap;
+        /* Allow wrapping for smaller screens */
+        margin: 10px 0;
+        /* Add some spacing */
+    }
+
+    .gallery-per p {
+        margin: 0 15px;
+        /* Add some spacing between items */
+    }
+
+    .gallery-per p:hover {
+        border-bottom: 1px solid #bda588;
+    }
+
+    .gallery-div-img {
+        display: flex;
+        flex-wrap: wrap;
+        /* Allow wrapping for smaller screens */
+        justify-content: center;
+        /* Center images */
+    }
+
+    .div1-img,
+    .div2-img,
+    .div3-img {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .div1-img1,
+    .div2-img2,
+    .div3-img3 {
+        width: 30%;
+        /* Default width for larger screens */
+        position: relative;
+        margin: 10px;
+        /* Add some spacing between images */
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+        color: white;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .div1-img1:hover .icon,
+    .div2-img2:hover .icon,
+    .div3-img3:hover .icon {
+        opacity: 1;
+    }
+
+    .footer {
+        width: 100%;
+        height: auto;
+        background-color: #262f39;
+        padding: 30px 0;
+        /* Vertical padding */
+        display: flex;
+        flex-wrap: wrap;
+        /* Allow wrapping for smaller screens */
+        justify-content: space-around;
+        /* Center footer items */
+        text-align: center;
+        /* Center text in footer */
+    }
+
+    .footer p {
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(194 160 119);
+    }
+
+    .footer ol {
+        padding: 0;
+        /* Remove default padding */
+    }
+
+    .footer ol li {
+        list-style: none;
+    }
+
+    .footer ol li a {
+        text-decoration: none;
+        color: white;
+        line-height: 2;
+    }
+
+    .footer ol li a:hover {
+        color: rgb(194 160 119);
+    }
+
+    .footer1,
+    .footer2,
+    .footer3,
+    .footer4 {
+        width: 22%;
+        margin: 10px;
+        text-align: left;
+        /* Add some spacing */
+    }
+
+    @media (max-width: 1024px) {
+
+        .div1-img1,
+        .div2-img2,
+        .div3-img3 {
+            width: 45%;
+            /* Wider images on medium screens */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .logo {
+            width: 40%;
+            /* Increase logo size on smaller screens */
+        }
+
+        .nav ol {
+            flex-direction: column;
+            /* Stack nav items vertically on small screens */
+        }
+
+        .gallery-per {
+            flex-direction: column;
+            /* Stack gallery-per items vertically */
+        }
+
+        .div1-img1,
+        .div2-img2,
+        .div3-img3 {
+            width: 90%;
+            /* Make images wider on smaller screens */
+        }
+
+        .footer1,
+        .footer2,
+        .footer3,
+        .footer4 {
+            width: 100%;
+            /* Stack footer items vertically on small screens */
+            margin: 5px 0;
+            /* Reduce margin */
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-nav">
+                <div class="logo">
+                    <img src="image/logo.png" alt="">
+                </div>
+                <div class="nav">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="sitePlan.html">Site plan</a></li>
+                        <li><a href="floor.html">Flour Plan</a></li>
+                        <li><a href="club.html">Club skylla</a></li>
+                        <li><a href="price-list.html">Price List</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="compliances.html">Compliances</a></li>
+                        <li><a href="Contact.html">Contact us</a></li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="image">
+                <div class="mains">
+                    <p>A project By : Mohit Gupta</p>
+                    <h1>Perfact View From <br> Every Angle</h1>
+                    <br><br><br><br>
+
+                    <button><a href="">Enquire Now</a></button>
+                    <Button><a href="">Download Brochure</a></Button>
+                    <br><br>
+
+                    <p class="pera">UPTOWN SKYLLA(PBRERA-SAS79-PR0546)</p>
+
+                    <br><br><br>
+                    <div class="phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <b>Call us now</b>
+                        <b>+917412374237</b>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <div class="gallery-logo">
+                <h2>Gallery</h2>
+            </div>
+
+            <div class="gallery-per">
+                <p>CONSTRUCTION UPDATE</p>
+                <P>SAMLE FLAT</P>
+                <P>PROJECT IMAGE</P>
+            </div>
+
+            <div class="gallery-div-img">
+                <div class="div1-img">
+                    <div class="div1-img1">
+                        <img src="image/flat 1.jpg" class="image" width="100%" height="100%" alt="flat1">
+                        <i class="icon fas fa-search"></i>
+                    </div>
+                    <div class="div1-img1">
+                        <img src="image/flat 2.jpg" class="image" width="100%" height="100%" alt="flat2">
+                        <i class="icon fas fa-search"></i>
+                    </div>
+                    <div class="div1-img1">
+                        <img src="image/flat 3.jpg" class="image" width="100%" height="100%" alt="flat3">
+                        <i class="icon fas fa-search"></i>
+                    </div>
+                    <div class="div1-img1">
+                        <img src="image/flat 4.jpg" class="image" width="100%" height="100%" alt="flat4">
+                        <i class="icon fas fa-search"></i>
+                    </div>
+                </div>
+
+                <div class="div2-img">
+                    <div class="div2-img2">
+                        <img src="image/flat 5.jpg" class="image" width="100%" height="100%" alt="flat1">
+                        <i class="icon fas fa-search"></i>
+                    </div>
+                    <div class="div2-img2">
+                        <img src="image/flat 6.jpg" class="image" width="100%" height="100%" alt="flat2">
+                        <i class="icon fas fa-search"></i>
+                    </div>
+                    <div class="div2-img2">
+                        <img src="image/flat 7.jpg" class="image" width="100%" height="100%" alt="flat3">
+                        <i class="icon fas fa-search"></i>
+                    </div>
+                    <div class="div2-img2">
+                        <img src="image/flat 8.jpg" class="image" width="100%" height="100%" alt="flat4">
+                        <i class="icon fas fa-search"></i>
+                    </div>
+                </div>
+
+                <div class="div3-img">
+                    <div class="div3-img3">
+                        <img src="image/flat 9.jpg " class="image" width="100%" height="100%" alt="flat1">
+                        <i class="icon fas fa-search"></i>
+                    </div>
+                    <div class="div3-img3">
+                        <img src="image/flat 10.jpg" class="image" width="100%" height="100%" alt="flat2">
+                        <i class="icon fas fa-search"></i>
+                    </div>
+                    <div class="div3-img3">
+                        <img src="image/flat 11.jpg" class="image" width="100%" height="100%" alt="flat3">
+                        <i class="icon fas fa-search"></i>
+                    </div>
+                    <div class="div3-img3">
+                        <img src="image/flat 12.jpg" class="image" width="100%" height="100%" alt="flat4">
+                        <i class="icon fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer1">
+            <p>ABOUT US</p>
+            <ol>
+                <li><a href="">Uptown Skylla offering</a></li>
+                <li><a href="">Luxery 2/3/4 BHK Possession</a></li>
+                <li><a href="">Ready Fats In IRAKPUR WITH</a></li>
+                <li><a href="">an Ultra Luxaury Amenities & 5</a></li>
+                <li><a href="">Star Rated Club House.#1</a></li>
+                <li><a href="">Contruction Quality.IGBC</a></li>
+                <li><a href="">Gold Pre Certified</a></li>
+                <li><a href="">Project.Possession Aug-23</a></li>
+            </ol>
+        </div>
+        <div class="footer2">
+            <p>USEFULL LINKS</p>
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="club.html">Club Skylla</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="">Why Choose us</a></li>
+                <li><a href="sitePlan.html">Site Plan</a></li>
+                <li><a href="price-list.html">Price List</a></li>
+            </ol>
+        </div>
+        <div class="footer3">
+            <p>Floor Plan</p>
+            <ol>
+                <li><a href="">2 BHK Flats</a></li>
+                <li><a href="">3 BHK Executive</a></li>
+                <li><a href="">3 BHK Premium</a></li>
+                <li><a href="">3 BHK Grande</a></li>
+                <li><a href="">3BHK + SERVANT ROOM</a></li>
+                <li><a href="">4 BHK + SERVANT ROOM</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ol>
+        </div>
+        <div class="footer4">
+            <p>Contact Us</p>
+            <ol>
+                <li><i class="fa-solid fa-location-dot"></i><a href="">PR-7,Chandigarh International <br> Airport Road,
+                        Zirakpur, Punjab <br> 140603</a></li>
+                <li><i class="fa-solid fa-phone"></i><a href="">+91 7009247378</a></li>
+                <li><i class="fa-solid fa-message"></i><a href="">info@uptownskylla.in</a></li>
+            </ol>
+        </div>
+    </footer>
+</body>
+
+</html>

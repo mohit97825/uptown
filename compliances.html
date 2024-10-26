@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliances</title>
+</head>
+<style>
+    /* Base Styles */
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    nav {
+        width: 100%;
+        height: 600px;
+        background: url(image/flat\ 1.jpg), gray;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+
+    .logo-nav {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    .logo img {
+        width: 55%;
+        height: auto;
+    }
+
+    .nav ol {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav ol li {
+        list-style-type: none;
+        padding: 39px 18px;
+    }
+
+    .nav ol li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    .nav ol li a:hover {
+        padding: 30% 0%;
+        border-top: 5px solid #bda588;
+        color: #bda588;
+    }
+
+    .location-logo h1 {
+        text-align: center;
+        padding-top: 20%;
+        font-size: 70px;
+        font-weight: 400;
+        color: white;
+    }
+
+    .homepage {
+        padding-left: 40%;
+    }
+
+    .homepage ol {
+        display: flex;
+    }
+
+    .homepage ol li {
+        list-style: none;
+        padding: 20px 20px;
+    }
+
+    .homepage ol li a {
+        color: white;
+        text-align: center;
+    }
+
+    .homepage ol li a:hover {
+        color: #bda588;
+    }
+
+    .rera {
+        padding: 20px;
+    }
+
+    .rera-div1 {
+        display: flex;
+        padding: 40px 20px;
+    }
+
+    .pera {
+        font-weight: bold;
+        color: #173e62;
+    }
+
+    .del {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .table {
+        width: 100%;
+        line-height: 2;
+        border: 1px solid black;
+        overflow-x: auto;
+        /* Enable horizontal scrolling */
+    }
+
+    .table1,
+    .table2 {
+        width: 100%;
+        padding: 2%;
+    }
+
+    .footer {
+        background-color: #262f39;
+        padding: 30px;
+        display: flex;
+        line-height: 2;
+        flex-wrap: wrap;
+        /* Allow wrapping of footer items */
+        justify-content: flex-start;
+        /* Align items to the left */
+        text-align: left;
+        /* Left align footer text */
+    }
+
+    .footer p {
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(194, 160, 119);
+    }
+
+    .footer ol li {
+        list-style: none;
+    }
+
+    .footer ol li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer ol li a:hover {
+        color: rgb(194, 160, 119);
+    }
+
+    .footer1,
+    .footer2,
+    .footer3,
+    .footer4 {
+        width: 22%;
+        margin-right: 20px;
+        /* Add spacing between footer sections */
+    }
+
+    /* Responsive Styles */
+    @media only screen and (max-width: 768px) {
+        .logo img {
+            width: 60%;
+            /* Adjust logo size for smaller screens */
+        }
+
+        .nav ol {
+            flex-direction: column;
+            /* Stack menu items vertically */
+            align-items: center;
+            /* Center align menu items */
+        }
+
+        .nav ol li {
+            padding: 15px 0;
+            /* Adjust padding for smaller screens */
+        }
+
+        .come h1 {
+            font-size: 2.5rem;
+            /* Reduce header size */
+        }
+
+        .rera-div1 {
+            flex-direction: column;
+            /* Stack project info vertically */
+            align-items: center;
+            /* Center align project info */
+            padding: 20px;
+            /* Adjust padding */
+        }
+
+        .del {
+            flex-direction: column;
+            /* Stack project details vertically */
+            align-items: center;
+            /* Center align project details */
+            margin-bottom: 20px;
+            /* Add margin below */
+        }
+
+        .table {
+            overflow-x: auto;
+            /* Allow horizontal scrolling for tables */
+        }
+
+        .footer {
+            flex-direction: column;
+            /* Stack footer columns vertically */
+            align-items: flex-start;
+            /* Align footer items to the left */
+        }
+
+        .footer1,
+        .footer2,
+        .footer3,
+        .footer4 {
+            width: 100%;
+            /* Full width for footer sections */
+            margin-bottom: 20px;
+            /* Add spacing between sections */
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .come h1 {
+            font-size: 2rem;
+            /* Further reduce header size */
+        }
+
+        .nav ol li {
+            padding: 10px 0;
+            /* Reduce padding further */
+        }
+
+        .pera {
+            font-size: 1.2rem;
+            /* Adjust paragraph font size */
+        }
+
+        .table th,
+        .table td {
+            font-size: 0.9rem;
+            /* Adjust table font size */
+        }
+
+        .footer p {
+            font-size: 1.5rem;
+            /* Adjust footer text size */
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-nav">
+                <div class="logo">
+                    <img src="image/logo.png" alt="logo">
+                </div>
+                <div class="nav">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="sitePlan.html">Site plan</a></li>
+                        <li><a href="floor.html">Flour Plan</a></li>
+                        <li><a href="club.html">Club skylla</a></li>
+                        <li><a href="price-list.html">Price List</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="compliances.html">Compliances</a></li>
+                        <li><a href="Contact.html">Contact us</a></li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="location-logo">
+                <h1>Compliances</h1>
+                <div class="homepage">
+                    <ol>
+                        <li><a href="index.html">HomePage</a></li>
+                        <li><a href="location.html">Location</a></li>
+                    </ol>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="rera">
+            <div class="rera-div1">
+                <p class="pera">RERA NO:
+                <p>PBRERA-SAS79-PR0546</p>
+                </p>
+            </div>
+            <div class="del">
+                <p>Project Details</p>
+                <p>Bank Account Details</p>
+                <p>Project Documents</p>
+            </div>
+            <div class="table">
+                <div class="table1">
+                    <table border="1">
+                        <tr>
+                            <th colspan="2" style="color: white; background-color: #bda588;">About the Project</th>
+                        </tr>
+                        <tr>
+                            <td>Project Name</td>
+                            <td>UPTOWN SKYLLA</td>
+                        </tr>
+                        <tr>
+                            <td>Project Address</td>
+                            <td>Village Ramgarh Bhudha under MC zirakpur , <br>
+                                Dera Bassi , Sahibzada Ajit Singh Nagar (Mohali) , Punjab – 140603</td>
+                        </tr>
+                        <tr>
+                            <td>Project Amenities</td>
+                            <td>street lighting, water supply, drainage water electric supply</td>
+                        </tr>
+
+                        <tr>
+                            <td>Project Zone</td>
+                            <td>Zone 1 – Master Plan Area of S.A.S.Nagar, Mullanpur and Zirakpur / Ludhiana within and
+                                outside M.C Limits upto 15 Kms</td>
+                        </tr>
+                        <tr>
+                            <td>Type of Project</td>
+                            <td>(1) Commercial (Building/Tower Development) <br>
+                                (2) Residential (Building/Tower Development)</td>
+                        </tr>
+                        <tr>
+                            <td>Project Status</td>
+                            <td colspan="2">New Project</td>
+                        </tr>
+                        <tr>
+                            <td>Project Start Date</td>
+                            <td>15-Oct-2019</td>
+                        <tr>
+                            <td> Proposed/ Expected Date of Project <br> Completion as specified in Form B</td>
+                            <td>15-Oct-2019</td>
+                        </tr>
+                        </tr>
+                    </table>
+                    <br>
+                    <table border="1">
+                        <tr>
+                            <th colspan="4" style="color: white; background-color: #bda588;">Project Land Details</th>
+                        </tr>
+                        <tr>
+                            <td>Total Area of Land Proposed to be developed (in sqr mtrs)</td>
+                            <td>23656.13</td>
+                            <td>Total Area of Land Proposed to be developed (in sqr mtrs)</td>
+                            <td>37216.34</td>
+                        </tr>
+                        <tr>
+                            <td>Area under group housing development excluding common areas and ameneties</td>
+                            <td>23528.08</td>
+                            <td>Area under residential plotted development excluding common areas and ameneties</td>
+                            <td>4587.89</td>
+                        </tr>
+                        <tr>
+                            <td>Area under commercial development excluding common areas and ameneties</td>
+                            <td>0(in sqr mtrs)</td>
+                            <td>Area under industrial development excluding common areas and ameneties</td>
+                            <td>0(in sqr mtrs)</td>
+                        </tr>
+                        <tr>
+                            <td>Area under common amenties servicing the entire project</td>
+                            <td colspan="3">128.05(in sqr mtrs)</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table class="table2" border="1">
+                        <tr>
+                            <th colspan="5" style="color: white; background-color: #bda588;">Project Land Khasra(s) and
+                                Area Details</th>
+                        </tr>
+                        <tr>
+                            <td>Sr No</td>
+                            <td>Khasra Number of Land proposed to be developed</td>
+                            <td>Area of Land proposed under Khasra</td>
+                            <td>Name of Villages under Khasra</td>
+                            <td>Project Land Status</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>467(4-0),474(6-0),1025/473(5-16),468(4-0)</td>
+                            <td>622.2 (in)</td>
+                            <td>Ramgarh</td>
+                            <td>Owned By Promoter</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>472(4-0),1023/471(3-7),1020/470/1min(0-9-5),882/46</td>
+                            <td>15541.5(in)</td>
+                            <td>Ramgarh</td>
+                            <td>Owned By Promoter</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer1">
+            <p>ABOUT US</p>
+            <ol>
+                <li><a href="">Uptown Skylla offering</a></li>
+                <li><a href="">Luxery 2/3/4 BHK Possession</a></li>
+                <li><a href="">Ready Fats In IRAKPUR WITH</a></li>
+                <li><a href="">an Ultra Luxaury Amenities & 5</a></li>
+                <li><a href="">Star Rated Club House.#1</a></li>
+                <li><a href="">Contruction Quality.IGBC</a></li>
+                <li><a href="">Gold Pre Certified</a></li>
+                <li><a href="">Project.Possession Aug-23</a></li>
+            </ol>
+        </div>
+        <div class="footer2">
+            <p>USEFULL LINKS</p>
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="club.html">Club Skylla</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="">Why Choose us</a></li>
+                <li><a href="sitePlan.html">Site Plan</a></li>
+                <li><a href="price-list.html">Price List</a></li>
+            </ol>
+        </div>
+        <div class="footer3">
+            <p>Floor Plan</p>
+            <ol>
+                <li><a href="">2 BHK Flats</a></li>
+                <li><a href="">3 BHK Executive</a></li>
+                <li><a href="">3 BHK Premium</a></li>
+                <li><a href="">3 BHK Grande</a></li>
+                <li><a href="">3BHK + SERVANT ROOM</a></li>
+                <li><a href="">4 BHK + SERVANT ROOM</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ol>
+        </div>
+        <div class="footer4">
+            <p>Contact Us</p>
+            <ol>
+                <li><i class="fa-solid fa-location-dot"></i><a href="">PR-7,Chandigarh International <br> Airport Road,
+                        Zirakpur, Punjab <br> 140603</a></li>
+                <li><i class="fa-solid fa-phone"></i><a href="">+91 7009247378</a></li>
+                <li><i class="fa-solid fa-message"></i><a href="">info@uptownskylla.in</a></li>
+            </ol>
+        </div>
+    </footer>
+</body>
+
+</html>
